@@ -199,7 +199,7 @@ Home.auth = true;
 const HomePage = css`
   position: relative;
   width: 100vw;
-  max-width: 786px;
+  max-width: 768px;
   height: 100vh;
   margin: 0 auto;
   background: #fff;

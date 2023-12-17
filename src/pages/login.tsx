@@ -9,7 +9,6 @@ import { colors } from "@/styles/Color";
 import Seo from "@/components/ScreenStructure/Seo";
 import Image from "next/image";
 import { FiLock, FiEyeOff, FiEye, FiUser, FiArrowLeft } from "react-icons/fi";
-import Link from "next/link";
 
 export default function Login() {
   const router = useRouter();
@@ -134,6 +133,8 @@ const loginPage = css`
   > div:first-of-type {
     position: relative;
     width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
     height: 80%;
     border-radius: 8px;
     color: ${colors.white};
