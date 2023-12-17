@@ -69,7 +69,7 @@ function Auth({ children }: PropsWithChildren) {
     required: true,
     onUnauthenticated() {
       const location = router.pathname;
-      router.push(`${location}/login`);
+      router.push(`/login`);
     },
   });
 

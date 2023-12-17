@@ -56,7 +56,13 @@ export default function Login() {
         <div>
           <div className="loginTop">
             <div className="keyImage">
-              <Image src={"/key.svg"} alt="key" width={250} height={325} />
+              <Image
+                src={"/key.svg"}
+                alt="key"
+                width={250}
+                height={325}
+                priority
+              />
               <div className="twinkleImage">
                 <Image
                   src={"/twinkle.svg"}
