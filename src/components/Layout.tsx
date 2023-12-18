@@ -5,7 +5,6 @@ import Seo from "./ScreenStructure/Seo";
 export default function Layout({ children }: PropsWithChildren) {
   return (
     <div css={layout}>
-      <Seo />
       <section className="screen-area">{children}</section>
     </div>
   );
