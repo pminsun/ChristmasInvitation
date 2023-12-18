@@ -13,6 +13,11 @@ import { FiLock, FiEyeOff, FiEye, FiUser, FiArrowLeft } from "react-icons/fi";
 export default function Login() {
   const router = useRouter();
   const { data: session } = useSession();
+  const [mounted, setMounted] = useState<boolean>(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const {
     register,
@@ -52,72 +57,76 @@ export default function Login() {
   return (
     <>
       <Seo />
-      <div css={loginPage}>
-        <div>
-          <div className="loginTop">
-            <div className="keyImage">
-              <Image
-                src={"/key.svg"}
-                alt="key"
-                width={250}
-                height={325}
-                priority
-              />
-              <div className="twinkleImage">
+      {mounted && (
+        <div css={loginPage}>
+          <div>
+            <div className="loginTop">
+              <div className="keyImage">
                 <Image
-                  src={"/twinkle.svg"}
-                  alt="twinkle"
-                  width={280}
-                  height={257}
+                  src={"/key.svg"}
+                  alt="key"
+                  width={250}
+                  height={325}
+                  priority
                 />
-              </div>
-            </div>
-          </div>
-          <form onSubmit={handleSubmit(onValid)} css={loginForm}>
-            <div>
-              <div className="inputArea">
-                <FiUser />
-                <input
-                  type="text"
-                  value={rememberId || ""}
-                  placeholder="성함"
-                  {...register("email", {
-                    required: "성함은 필수 입력입니다.",
-                  })}
-                  onChange={onIdChange}
-                />
-              </div>
-            </div>
-            <div>
-              <div className="inputArea">
-                <FiLock />
-                <input
-                  type={showPassword ? "text" : "password"}
-                  placeholder="시크릿코드"
-                  {...register("password", {
-                    required: "시크릿코드는 필수 입력입니다.",
-                    minLength: {
-                      value: 8,
-                      message: "시크릿코드를 입력하세요.",
-                    },
-                  })}
-                />
-                <div className="passwordShow" onClick={clickShowPassword}>
-                  {showPassword ? <FiEye /> : <FiEyeOff />}
+                <div className="twinkleImage">
+                  <Image
+                    src={"/twinkle.svg"}
+                    alt="twinkle"
+                    width={280}
+                    height={257}
+                  />
                 </div>
               </div>
             </div>
-            <p {...register("loginError")}>
-              {errors.loginError && (
-                <span className="errorLogin">{errors.loginError.message}</span>
-              )}
-            </p>
-            <button type="submit" disabled={isSubmitting}>
-              입장하기
-            </button>
-          </form>
+            <form onSubmit={handleSubmit(onValid)} css={loginForm}>
+              <div>
+                <div className="inputArea">
+                  <FiUser />
+                  <input
+                    type="text"
+                    value={rememberId || ""}
+                    placeholder="성함"
+                    {...register("email", {
+                      required: "성함은 필수 입력입니다.",
+                    })}
+                    onChange={onIdChange}
+                  />
+                </div>
+              </div>
+              <div>
+                <div className="inputArea">
+                  <FiLock />
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    placeholder="시크릿코드"
+                    {...register("password", {
+                      required: "시크릿코드는 필수 입력입니다.",
+                      minLength: {
+                        value: 8,
+                        message: "시크릿코드를 입력하세요.",
+                      },
+                    })}
+                  />
+                  <div className="passwordShow" onClick={clickShowPassword}>
+                    {showPassword ? <FiEye /> : <FiEyeOff />}
+                  </div>
+                </div>
+              </div>
+              <p {...register("loginError")}>
+                {errors.loginError && (
+                  <span className="errorLogin">
+                    {errors.loginError.message}
+                  </span>
+                )}
+              </p>
+              <button type="submit" disabled={isSubmitting}>
+                입장하기
+              </button>
+            </form>
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 }
