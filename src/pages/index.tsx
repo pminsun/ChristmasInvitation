@@ -35,9 +35,9 @@ export default function Home() {
   return (
     <>
       <section css={HomePage}>
-        <div css={flexCenterStyle} className="logOut">
+        {/* <div css={flexCenterStyle} className="logOut">
           <button onClick={handleLogoutOpen}>로그아웃</button>
-        </div>
+        </div> */}
         <div className="patyImage">
           <div className="topImage">
             <div className="leftImage">
@@ -145,7 +145,7 @@ export default function Home() {
               <p className="info">
                 35000원 <br /> (카카오뱅크 3333-20-0573174) 예금주: 이혜경
               </p>
-              <p className="detailInfo">* 12.21(목) 까지 입금바랍니다.</p>
+              <p className="detailInfo">* 12.22(금) 까지 입금바랍니다.</p>
             </div>
             <div>
               <p className="title">장소</p>
@@ -208,9 +208,9 @@ const HomePage = css`
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #fff;
+    background-color: #1a1723;
     z-index: 50;
-    color: #000;
+    color: #1a1723 !important;
   }
 
   .patyImage {
