@@ -28,10 +28,6 @@ export default NextAuth({
             password: "Partynight!",
           },
           {
-            id: "김희선",
-            password: "Partynight!",
-          },
-          {
             id: "조효진",
             password: "Partynight!",
           },
@@ -45,6 +41,10 @@ export default NextAuth({
           },
           {
             id: "박연주",
+            password: "Partynight!",
+          },
+          {
+            id: "김희선",
             password: "Partynight!",
           },
         ];
