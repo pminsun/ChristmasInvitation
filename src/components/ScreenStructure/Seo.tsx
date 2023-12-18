@@ -27,6 +27,9 @@ export default function Seo() {
           "https://images.unsplash.com/photo-1576995083066-f7bf549dc771?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
       />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:article:author" content="MinSun" />
     </Head>
   );
 }
