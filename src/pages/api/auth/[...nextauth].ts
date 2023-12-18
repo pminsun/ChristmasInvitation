@@ -28,7 +28,7 @@ export default NextAuth({
             password: "Partynight!",
           },
           {
-            id: "김주영",
+            id: "김희선",
             password: "Partynight!",
           },
           {

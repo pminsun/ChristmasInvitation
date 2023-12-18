@@ -144,7 +144,7 @@ export default function Home() {
             <div>
               <p className="title">참가비</p>
               <p className="info">
-                35000원 <br /> (카카오뱅크 3333-20-0573174)
+                35000원 <br /> (카카오뱅크 3333-20-0573174) 예금주: 이혜경
               </p>
               <p className="detailInfo">* 12.21(목) 까지 입금바랍니다.</p>
             </div>
