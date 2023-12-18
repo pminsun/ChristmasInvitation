@@ -11,7 +11,7 @@ export default function Seo() {
         content="12/23-24 크리스마스 파티 초대장 입니다."
       />
       <meta property="og:title" content={"크리스마스 파티 초대장"} />
-      <meta property="og:site_name" content="MinSun's Blog" />
+      <meta property="og:site_name" content="크리스마스 파티" />
       <meta
         property="og:description"
         content={"12/23-24 크리스마스 파티 초대장 입니다."}
