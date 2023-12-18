@@ -159,7 +159,7 @@ export default function Home() {
         <div className="partyEnd">
           <div>
             <p>그럼 파티장에서 뵙기를 고대하겠습니다.</p>
-            <p>감사합니다</p>
+            <p>감사합니다.</p>
           </div>
         </div>
         {/* Logout Modal */}
